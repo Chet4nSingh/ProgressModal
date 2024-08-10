@@ -51,6 +51,7 @@ export default forwardRef(function Modal({ open, closeModal }, ref) {
 
   return (
     <dialog
+      id="dialog"
       ref={dialog}
       className="w-[40%] bg-zinc-800 text-white text-3xl backdrop:bg-black backdrop:opacity-70"
     >
@@ -66,7 +67,8 @@ export default forwardRef(function Modal({ open, closeModal }, ref) {
         </div>
       </div>
       <progress
-        className="w-full h-4"
+        id="progress"
+        className="w-full h-4 block"
         value={`${timeRemaining}`}
         min="0"
         max="3000"
